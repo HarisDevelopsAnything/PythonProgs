@@ -5,4 +5,8 @@ for i in range(len(t)):
     for j in range(len(t[i])):
         rowsum[i]+= t[i][j]
         colsum[j]+= t[i][j]
-print(rowsum,colsum)
+for i in range(len(t)):
+    for j in range(len(t[i])):
+        print(t[i][j],end=" ")
+    print(rowsum[i])
+print(*colsum)
