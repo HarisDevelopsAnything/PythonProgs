@@ -34,4 +34,5 @@ while True:
     elif(ch==11):
         print("Quitting.")
         break
-    
+    else:
+        print("Invalid input!")
