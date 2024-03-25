@@ -9,11 +9,11 @@ while True:
         l=eval(input("Enter the set 2: "))
         s2= set(l)
     elif(ch==2):
-        inp= input("What to insert?: ")
+        inp= int(input("What to insert?: "))
         s1.update(inp)
-        print(l)
+        print(s1)
     elif(ch==3):
-        inp= input("What to insert?: ")
+        inp= int(input("What to insert?: "))
         s2.update(inp)
     elif(ch==4):
         inp= int(input("What to delete?: "))
