@@ -24,5 +24,3 @@ def showCart(cart):
         print(f"{i}\t{j[0]}\t{j[1]}\t{j[2]}")
         totalcost+= j[2]
     print("Total amount= ",totalcost)
-
-
