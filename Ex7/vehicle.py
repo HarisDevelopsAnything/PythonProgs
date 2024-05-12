@@ -35,8 +35,8 @@ class ElectricVehicle(Vehicle):
         self.chargespd= chargespd
         self.maxrange= maxrange
     def displayData(self):
-        print(f"Battery capacity: {self.fcap} kWh")
-        print(f"Charging speed: {self.syl}kW")
+        print(f"Battery capacity: {self.batterycap} kWh")
+        print(f"Charging speed: {self.chargespd}kW")
     def calcMileage(self):
         mileage= self.batterycap/self.maxrange
         return mileage
@@ -71,6 +71,38 @@ class Truck(PetrolVehicle):
     def displayData(self):
         PetrolVehicle.displayData(self)
         print(f"Cargo Capacity: {self.cargo_capacity} cubic feet")
+vid= input("Vehicle ID: ")
+vname= input("Vehicle name: ")
+owner= input("Owner's name: ")
+regno= input("Reg. no.: ")
+color= input("Vehicle color: ")
+print("1) Car\n2) Bike\n3) Truck")
+ch= int(input("Enter your choice: ")[0])
+if ch==1:
+    batterycap= int(input("Battery capacity: "))
+    chargespd= int(input("Charging speed: "))
+    maxrange= int(input("Max range: "))
+    fcap= int(input("Fuel capacity: "))
+    cyl= int(input("No. of cyinders: "))
+    hp= int(input("HP: "))
+    trunk_space= int(input("Trunk space: "))
+    vehicle= Car(vid, vname, owner, regno, color, batterycap, chargespd, maxrange, fcap, cyl, hp, trunk_space)
+elif ch==2:
+    batterycap= int(input("Battery capacity: "))
+    chargespd= int(input("Charging speed: "))
+    maxrange= int(input("Max range: "))
+    fcap= int(input("Fuel capacity: "))
+    cyl= int(input("No. of cyinders: "))
+    hp= int(input("HP: "))
+    top_speed= int(input("Top speed: "))
+    vehicle= Bike(vid, vname, owner, regno, color, batterycap, chargespd, maxrange, fcap, cyl, hp, top_speed)
+elif ch==3:
+    fcap= int(input("Fuel capacity: "))
+    cyl= int(input("No. of cyinders: "))
+    hp= int(input("HP: "))
+    maxrange= int(input("Max range: "))
+    cargo_capacity= int(input("Cargo capacity: "))
+    vehicle= Truck(vid, vname, owner, regno, color, fcap, cyl, hp, maxrange, cargo_capacity)
 Tesla= Car("1", "Etios", "Haris", "23bcs104", "Navy Blue", 4500, 45, 450, 50, 4, 1250, 2000)
 Tesla.displayData()
 Ather= Bike("2", "Ather 450X", "Jonathan", "23bcs105", "Space Grey", 3400, 37, 150, 10, 2, 250, 150)
