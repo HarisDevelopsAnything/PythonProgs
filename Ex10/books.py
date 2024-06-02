@@ -26,6 +26,7 @@ class Book:
                 lib.truncate()
                 for i in books:
                     pickle.dump(i, lib)
+                print("Book removed.")
 
     def showBooks():
         lib= open("books.bin", "rb")
@@ -61,5 +62,3 @@ while True:
     else:
         print("Exitting.")
         break
-
-
