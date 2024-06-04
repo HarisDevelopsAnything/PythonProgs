@@ -3,7 +3,7 @@ print("1) Algebraic operation 2) Matrix operation 3) Exit")
 ch= int(input("Enter the choice: "))
 if ch==1:
     a= int(input("Enter the first number: "))
-    b= int(input("Enter the first number: "))
+    b= int(input("Enter the second number: "))
     print(f"Sum: {algebra.add(a,b)}")
     print(f"Diff: {algebra.sub(a,b)}")
     print(f"Product: {algebra.mul(a,b)}")
