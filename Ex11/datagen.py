@@ -8,3 +8,4 @@ for i in range(0,31):
         row.append(random.randint(1500, 15000))
     csvfile.writerow(row)
 file.close()
+print("Hello")
